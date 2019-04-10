@@ -1,5 +1,7 @@
-﻿@model Customer
+﻿@*@model Customer*@
+@model CustomersCreateVM
 @{ ViewBag.Title = "Create Customers"; }
+
 <h2>Create customer</h2>
 <form asp-controller="customers" asp-action="create" method="post">
     <label asp-for="CompanyName"></label>
