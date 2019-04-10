@@ -1,0 +1,21 @@
+﻿@model Customer
+@{ ViewBag.Title = "Create Customers"; }
+<h2>Create customer</h2>
+<form asp-controller="customers" asp-action="create" method="post">
+    <label asp-for="CompanyName"></label>
+    <input asp-for="CompanyName" />
+    <span asp-validation-for="CompanyName"></span>
+
+    <label asp-for="City"></label>
+    <input asp-for="City" />
+    <span asp-validation-for="City"></span>
+
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+
+@section scripts
+{
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+}

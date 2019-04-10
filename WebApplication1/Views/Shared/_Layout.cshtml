@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    @RenderSection("css", false)
+</head>
+<body>
+    <h1>Acme</h1>
+    <div style="background-color:#CCC; padding:10px;">
+        @RenderBody()
+    </div>
+    <footer>&copy; Acme 2019</footer>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

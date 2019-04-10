@@ -1,0 +1,20 @@
+﻿@*@model Customer[]*@
+@model CustomersIndexVM[]
+@{ ViewBag.Title = "All Customers"; }
+
+<h2>All Customers (@Model.Length)</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @item.CompanyName
+        @if (item.isVIP)
+        {
+            <span>VIP</span>
+        }
+    </li>
+}
+</ul>
+<a asp-controller="customers" asp-action="create">New customer</a>
+<partial name="_TimeBox" model="DateTime.Now" />
+<partial name="_TimeBox" model="DateTime.Now" />
